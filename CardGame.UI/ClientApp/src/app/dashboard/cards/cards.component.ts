@@ -101,7 +101,6 @@ export class CardsComponent implements OnInit, OnDestroy {
     }else{
       this.cardsUnsorted.push(event);
     }
-    console.log(this.cardsUnsorted);
     this.form.controls['cardsUnsorted'].setValue(this.cardsUnsorted);
   }
 }
