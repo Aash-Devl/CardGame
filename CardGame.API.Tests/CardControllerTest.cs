@@ -1,6 +1,7 @@
 using CardGame.API.Controllers;
 using CardGame.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Xunit;
 
 namespace CardGame.API.Tests
@@ -8,9 +9,10 @@ namespace CardGame.API.Tests
     public class CardControllerTest
     {
         private readonly CardController _controller;
+        private readonly ILogger<CardController> _logger;
 
         public CardControllerTest() {
-            _controller = new CardController();
+            _controller = new CardController(_logger);
         }
 
         [Fact]

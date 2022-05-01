@@ -15,10 +15,6 @@ namespace CardGame.API.Controllers
     {
         private readonly ILogger<CardController> _logger;
 
-        public CardController()
-        {
-        }
-
         public CardController(ILogger<CardController> logger)
         {
             _logger = logger;
